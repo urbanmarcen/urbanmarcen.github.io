@@ -20,10 +20,10 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          
+          Learn to react
         </a>
       </header>
-      <footer>
+      <footer  className="App-footer">
         {APP_VERSION}
       </footer>
     </div>
