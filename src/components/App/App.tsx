@@ -1,6 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from 'assets/media/logo.svg';
+import 'assets/css/App.css';
+
+import {
+  APP_VERSION 
+} from 'config';
 
 function App() {
   return (
@@ -8,7 +12,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Demo React project
         </p>
         <a
           className="App-link"
@@ -16,9 +20,12 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          
         </a>
       </header>
+      <footer>
+        {APP_VERSION}
+      </footer>
     </div>
   );
 }
