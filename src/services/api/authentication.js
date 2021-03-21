@@ -1,11 +1,11 @@
 // Meet API
 
-import { ApiCore } from "services/api/utilities";
+import { ApiCore } from "services/utilities";
 
 const url = "auth";
 const plural = "auth";
 const single = "auth";
-const apiVersion = "v1"; // optional for later
+const apiVersion = "v1"; // optional for later 
 
 
 // plural and single may be used for message logic if needed in the ApiCore class.
@@ -19,7 +19,9 @@ const apiAuthentication = new ApiCore({
   delete: true,
   url: url,
   plural: plural,
-  single: single
+  single: single,
+  baseUrl: null,
+  tokenAuth: false,
 });
 
 

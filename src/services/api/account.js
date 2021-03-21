@@ -1,10 +1,10 @@
 // Meet API
 
-import { ApiCore } from "services/api/utilities";
+import { ApiCore } from "services/utilities";
 
 const url = "account";
-const plural = "contents";
-const single = "content";
+const plural = "accounts";
+const single = "account";
 const apiVersion = "v1"; // optional for later
 
 
@@ -19,7 +19,9 @@ const apiAccount = new ApiCore({
   delete: true,
   url: url,
   plural: plural,
-  single: single
+  single: single,
+  baseUrl: null,
+  tokenAuth: true,
 });
 
 

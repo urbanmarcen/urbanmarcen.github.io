@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// CSS import - remove
+// CSS - only main overrides
 import 'assets/css/index.css';
 
 // Components
@@ -20,13 +20,6 @@ import { configureStore } from "./store";
 import { ConnectedRouter } from "connected-react-router";
 import { createBrowserHistory } from "history";
 
-
-
-
-/*const loadApp = async () => {
-  const module = await import("./components/App");
-  return module.default;
-};*/
 
 const history = createBrowserHistory();
 
@@ -49,7 +42,5 @@ const render = async (store: any) => {
   render(configureStore);
 })();
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
 reportWebVitals();

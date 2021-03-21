@@ -1,6 +1,7 @@
 // api services
 import apiAccount from "./api/account";
 import apiAuthentication from "./api/authentication";
+import apiSpacex from "./api/spacex";
 
 // data models
 //import { ModelAccount } from "./model";
@@ -9,6 +10,7 @@ import apiAuthentication from "./api/authentication";
 export {
   apiAccount,
   apiAuthentication,
+  apiSpacex,
 };
 
 // export models

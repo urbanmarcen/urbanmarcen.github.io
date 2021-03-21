@@ -1,96 +1,95 @@
 import axios from "axios";
 import { handleResponse, handleError } from "./response";
 
-import { apiUrl } from "config";
 
-// Define your api url from any source.
-// Pulling from your .env file when on the server or from localhost when locally
-const BASE_URL = apiUrl + "/api";
-
-const getAxiosConfig = () => {
+const getAxiosConfig = (useToken) => {
   
   var token = localStorage.getItem("jwtToken");
   var lng = localStorage.getItem("lng");
 
   return {
-    headers: {
+    headers: useToken ? {
       Authorization: "Bearer " + token,
       "Accept-Language": lng
-    },
+    } : {},
     responseType: "json"
   };
 };
 
-/** @param {string} resource */
-const getAll = resource => {
+
+const getAll = (baseUrl, resource) => {
   return axios
-    .get(`${BASE_URL}/${resource}`)
+    .get(`${baseUrl}/${resource}`)
     .then(handleResponse)
     .catch(handleError);
 };
 
-/** @param {string} resource */
-/** @param {object} model */
-const get = (resource, model = null) => {
-  let axiosConfig = getAxiosConfig();
+
+const get = (baseUrl, resource, model = null, useToken) => {
+
+  let axiosConfig = getAxiosConfig(useToken);
 
   // add parameters to get http call
   if (model !== null) {
     axiosConfig.params = model;
   }
   return axios
-    .get(`${BASE_URL}/${resource}`, axiosConfig)
+    .get(`${baseUrl}/${resource}`, axiosConfig)
     .then(handleResponse)
     .catch(handleError);
 };
 
-/** @param {string} resource */
-/** @param {string} id */
-const getSingle = (resource, id) => {
+
+const getSingle = (baseUrl, resource, id, useToken) => {
+
+  let axiosConfig = getAxiosConfig(useToken);
+
   return axios
-    .get(`${BASE_URL}/${resource}/${id}`)
+    .get(`${baseUrl}/${resource}/${id}`, axiosConfig)
     .then(handleResponse)
     .catch(handleError);
 };
 
-/** @param {string} resource */
-/** @param {object} model */
-const post = (resource, model = null) => {
-  let axiosConfig = getAxiosConfig();
+
+const post = (baseUrl, resource, model = null, useToken) => {
+  
+  let axiosConfig = getAxiosConfig(useToken);
+
   return axios
-    .post(`${BASE_URL}/${resource}`, model, axiosConfig)
+    .post(`${baseUrl}/${resource}`, model, axiosConfig)
     .then(handleResponse)
     .catch(handleError);
 };
 
-/** @param {string} resource */
-/** @param {object} model */
 
-const put = (resource, model) => {
+const put = (baseUrl, resource, model, useToken) => {
+  
+  let axiosConfig = getAxiosConfig(useToken);
+
   return axios
-    .put(`${BASE_URL}/${resource}`, model)
+    .put(`${baseUrl}/${resource}`, model, axiosConfig)
     .then(handleResponse)
     .catch(handleError);
 };
 
-/** @param {string} resource */
 
-/** @param {object} model */
+const patch = (baseUrl, resource, model, useToken) => {
 
-const patch = (resource, model) => {
+  let axiosConfig = getAxiosConfig(useToken);
+
   return axios
-    .patch(`${BASE_URL}/${resource}`, model)
+    .patch(`${baseUrl}/${resource}`, model, axiosConfig)
     .then(handleResponse)
     .catch(handleError);
 };
 
-/** @param {string} resource */
 
-/** @param {string} id */
+const remove = ( baseUrl, resource, id, useToken) => {
+  
+  let axiosConfig = getAxiosConfig(useToken);
 
-const remove = (resource, id) => {
   return axios
-    .delete(`${BASE_URL}/${resource}`, id)
+    .delete(`${baseUrl}/${resource}`, id, axiosConfig)
     .then(handleResponse)
     .catch(handleError);
 };

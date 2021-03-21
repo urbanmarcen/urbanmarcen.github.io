@@ -9,7 +9,7 @@ import {
   const initialState = {
     welcomeMessage: 'Please and Thank you.',
     profile: {
-      displayName: "",
+      displayName: "Guest",
       initials: "",
       allowLogin: true,
       allowRegister: false

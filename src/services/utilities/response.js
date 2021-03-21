@@ -1,5 +1,4 @@
-export function handleResponse(response) {
-  //console.log('response ---------------------',response);
+export function handleResponse(response) { 
   if (response.results) {
     return response.results;
   }
@@ -13,8 +12,8 @@ export function handleResponse(response) {
 
 export function handleError(error) {
   if (error.data) {
-    //console.log('error',error);
     return error.data;
   }
-  return error;
+  
+  return { error: error };
 }

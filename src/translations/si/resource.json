@@ -1,1 +1,25 @@
-{}
+{
+  "Languages": "Jeziki",
+  "Welcome, {{name}}": "Dobrodošli, {{name}}",
+  "Home": "Domov",
+  "SPACEX feed": "SPACEX feed",
+  "Context API": "Context API",
+  "PageNotFound": "StranNeObstaja",
+  "PrivateLink": "ZasebnaPovezava",
+  "Welcome to my editorial interface": "Welcome to my editorial interface",
+  "Welcome to my demo page.": "Dobrodošli na demo strani.",
+  "The page you requested was not found!": "Stran, ki ste jo iskali ne obstaja!",
+  "This page is show only for authenticated users.": "Stran je dostopna samo avtenticiranim uporabnikom.",
+  "SpaceX rocket launch feed": "SpaceX objave izstrelitev",
+  "Chapter {{chptr}}": "Poglavje {{chptr}}",
+  "SpaceX Starlink Satelites": "SpaceX Starlink sateliti",
+  "Data not loaded": "Napaka pri nalaganju podatkov",
+  "The list contains {{num}} satelites.": "Seznam vsebuje {{num}} satelitov.",
+  "Satelite name, version & launch date": "Ime, različica in datum izstrelitve",
+  "Form": "Obrazec",
+  "Validation in progress ... If the user is logged-in, process the link else redirect to login!": "Validacija v teku ... V primeru da je uporabnik prijavljen, nadaljuj, drugače preusmeri na prijavo!",
+  "Internal Context API example": "Internal Context API example",
+  "All complex multi level UI components can use separate Context API with internal dispatc. No need to use Redux if the state is not neede globaly by the application.": "All complex multi level UI components can use separate Context API with internal dispatc. No need to use Redux if the state is not neede globaly by the application.",
+  "All complex multi level UI components can use separate Context API with internal dispatch. No need to use Redux if the state is not needed globaly by the application. All subccomponents have access to the same data instance in dispatch options!": "All complex multi level UI components can use separate Context API with internal dispatch. No need to use Redux if the state is not needed globaly by the application. All subccomponents have access to the same data instance in dispatch options!",
+  "7 nested components using the same context data as source": "7 nested components using the same context data as source"
+}
