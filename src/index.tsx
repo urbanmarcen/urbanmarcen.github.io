@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 // CSS - only main overrides
 import 'assets/css/index.css';
@@ -31,7 +32,9 @@ const render = async (store: any) => {
   ReactDOM.render(
     <Provider store={store}>
       <ConnectedRouter history={history}>
+        <BrowserRouter basename="/#/">
           <App />
+        </BrowserRouter>
       </ConnectedRouter>
     </Provider>,
     target

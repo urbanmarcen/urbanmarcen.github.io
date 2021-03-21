@@ -59,7 +59,9 @@ const NavBar = props => {
           <IconMenu />
         </IconButton>
         <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-          {t('Welcome, {{name}}', {name: profile.displayName} )}
+          {/*t('Welcome, {{name}}', {name: profile.displayName} )*/}
+          {t('Welcome')}{', '}{profile.displayName}
+          
         </Typography>
 
         <Grid>

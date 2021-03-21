@@ -3,7 +3,8 @@ import { useTranslation } from "react-i18next";
 
 import { 
   Typography, 
-  Grid 
+  Grid, 
+  Paper
 } from "@material-ui/core";
 
 const HomePage = props => {
@@ -14,14 +15,16 @@ const HomePage = props => {
 
   return (
     <Grid container justify="center">
-      <Grid item xs={6} align="center">
+      <Grid item container xs={6} align="center" spacing={2}>
+
         <Typography variant="h2" gutterBottom>
           {t("Welcome to my demo page.")}
         </Typography>
-        {[1,2,3,4,5,6,7,8,9,10].map(c=> {
-          return (
-          <>
-            <Typography variant="h6" key={'c'+c}>{t('Chapter {{chptr}}', {chptr: c})}</Typography>
+
+        {[1,2,3,4,5,6,7,8,9,10].map(c=> 
+          
+          <Grid item key={'chptr'+c} xs={12}>
+            <Typography variant="h6">{t('Chapter {{chptr}}', {chptr: c})}</Typography>
             <Typography variant="body2" key={'c1'+c} gutterBottom>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -31,11 +34,9 @@ const HomePage = props => {
             Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
             software like Aldus PageMaker including versions of Lorem Ipsum.
             </Typography>
-          </>
+          </Grid>
           )
         }
-        
-        )}
       </Grid>
     </Grid>
   );

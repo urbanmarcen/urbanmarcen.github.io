@@ -18,8 +18,7 @@
   "Satelite name, version & launch date": "Ime, različica in datum izstrelitve",
   "Form": "Obrazec",
   "Validation in progress ... If the user is logged-in, process the link else redirect to login!": "Validacija v teku ... V primeru da je uporabnik prijavljen, nadaljuj, drugače preusmeri na prijavo!",
-  "Internal Context API example": "Internal Context API example",
-  "All complex multi level UI components can use separate Context API with internal dispatc. No need to use Redux if the state is not neede globaly by the application.": "All complex multi level UI components can use separate Context API with internal dispatc. No need to use Redux if the state is not neede globaly by the application.",
-  "All complex multi level UI components can use separate Context API with internal dispatch. No need to use Redux if the state is not needed globaly by the application. All subccomponents have access to the same data instance in dispatch options!": "All complex multi level UI components can use separate Context API with internal dispatch. No need to use Redux if the state is not needed globaly by the application. All subccomponents have access to the same data instance in dispatch options!",
-  "7 nested components using the same context data as source": "7 nested components using the same context data as source"
+  "Internal Context API example": "Notrani Context API primer",
+  "All complex multi level UI components can use separate Context API with internal dispatch. No need to use Redux if the state is not needed globaly by the application.": "Vse kompleksne komponente na več ravneh uporabniškega vmesnika lahko uporabljajo ločen API Context z notranjim dispatchom. Redux-a ni treba uporabljati, če aplikacija ne potrebuje teg stanja",
+  "7 nested components using the same context data as source": "7 ugnezdenih komponent, ki uporabljajo enake Context API podatke"
 }

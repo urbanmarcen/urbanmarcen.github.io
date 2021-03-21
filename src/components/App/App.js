@@ -1,8 +1,5 @@
 import React from 'react';
 
-import { BrowserRouter } from "react-router-dom";
-
-
 // Material UI
 import { 
   makeStyles ,
@@ -30,6 +27,7 @@ import AppRouter from './AppRouter';
 // Load custom theme
 import myTheme from "./Theme";
 
+
 const useStyles = makeStyles((theme) => ({
   root: {   
     
@@ -48,6 +46,8 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+
+
 const App = ( props ) => {
 
   const classes = useStyles();
@@ -56,17 +56,15 @@ const App = ( props ) => {
     return () => {}
   },[])
 
-  return (
+  return ( 
+    
     <div className={classes.root}>
       <MuiThemeProvider theme={myTheme}>      
-        <BrowserRouter basename="/#/">
         <NavBar />
         <ToolbarSpacer/>
-        
-          <Grid className={classes.main}>
-            <AppRouter />
-          </Grid>
-        </BrowserRouter>
+        <Grid className={classes.main}>
+          <AppRouter />
+        </Grid>       
         <Grid className={classes.footer}>
           <Footer />
         </Grid>

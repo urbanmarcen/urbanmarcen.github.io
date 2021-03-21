@@ -31,6 +31,7 @@ const FormContainer = props => {
 
         <Typography variant="body1">{t('7 nested components using the same context data as source')}</Typography>
         
+        <code>Main component Render: {form.title}</code>
       </Grid>
       <Grid item xs={12} align="">
         <NestedInput>
