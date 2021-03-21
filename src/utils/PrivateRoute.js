@@ -16,8 +16,6 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
     token: state.account.token
   }));
 
-  console.log(token);
-
   if (loading === true && isAuthenticated === false) return null;
 
   if (loading === false && isAuthenticated === false && token === null) {
